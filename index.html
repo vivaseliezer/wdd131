@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Orlando Vivas</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals course landing page for Orlando Vivas. This page highlights responsive layout design, local images, and dynamic JavaScript dates.">
+    <meta name="author" content="Orlando Vivas">
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="styles/base.css">
+    <!-- Deferred JavaScript reference -->
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&amp;id=p7#p7"
+                target="_blank" rel="noopener">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Orlando Vivas</h1>
+
+        <div class="grid-container">
+            <!-- About Me Card -->
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-content">
+                    <div class="bio-section">
+                        <img class="profile-pic" src="images/profile.jpg" alt="Orlando Vivas Profile Photo">
+                        <p>
+                            My name is Orlando Vivas, and I go by Orlando. I am a student of web development at
+                            BYU-Pathway Worldwide, majoring in Software Development. I am from Guatemala and I am
+                            passionate about technology, programming, and learning how to create beautiful, dynamic, and
+                            user-friendly websites. In my free time, I enjoy working on personal coding projects,
+                            listening to music, and exploring new tech stacks.
+                        </p>
+                    </div>
+
+                    <div class="location-title">Guatemala City, Guatemala</div>
+
+                    <div class="location-details">
+                        <figure>
+                            <img src="images/guatemala.jpg" alt="Official Flag of Guatemala">
+                            <figcaption>Official Flag of Guatemala</figcaption>
+                        </figure>
+                        <p>
+                            Guatemala is a country in Central America known for its rich Mayan heritage, colorful
+                            traditions, and dramatic highlands. Guatemala City, the capital, is a bustling urban center
+                            surrounded by volcanoes and mountain scenery. The country is admired for its cultural
+                            history, beautiful landscapes, and warm hospitality.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Web Dev Resources Card -->
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="card-content">
+                    <ul class="resources-list">
+                        <li><a href="https://dev.to" target="_blank" rel="noopener">Dev.to Community</a></li>
+                        <li><a href="https://www.smashingmagazine.com" target="_blank" rel="noopener">Smashing
+                                Magazine</a></li>
+                        <li><a href="https://css-tricks.com" target="_blank" rel="noopener">CSS Tricks</a></li>
+                        <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3 Schools</a></li>
+                        <li><a href="https://www.udemy.com" target="_blank" rel="noopener">Udemy</a></li>
+                        <li><a href="https://picsum.photos" target="_blank" rel="noopener">Lorem Picsum Image
+                                Placeholder</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span>  Orlando Vivas  Guatemala</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

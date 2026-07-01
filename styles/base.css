@@ -1,0 +1,250 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700&display=swap');
+
+/* Color Variables and Design Tokens */
+:root {
+    --primary-color: #1e4e79;      /* Steel Blue */
+    --primary-dark: #143552;       /* Darker Blue */
+    --secondary-color: #333333;    /* Dark Charcoal for Nav */
+    --hover-color: #444444;        /* Lighter Nav Hover */
+    --highlight-color: #ffe600;    /* Yellow gold for details and last modified */
+    --text-color: #2b3a4a;         /* Dark Slate for body text */
+    --bg-color: #f7f9fa;           /* Off-white background */
+    --card-bg: #ffffff;            /* White card background */
+    --border-color: #d1d9e0;       /* Light border */
+    --shadow-color: rgba(0, 0, 0, 0.08); /* Card shadow */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* Reset and Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 20px 0 0 0;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+#course-title {
+    display: block;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding-bottom: 20px;
+}
+
+/* Navigation Menu */
+nav {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    background-color: var(--hover-color);
+    color: var(--highlight-color);
+    border-bottom: 3px solid var(--highlight-color);
+}
+
+/* Main Layout */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+h1 {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* CSS Grid for Cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1.6fr 1fr; /* Make About Me wider like in the screenshot */
+    }
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* About Me Content */
+.bio-section {
+    overflow: hidden; /* Clearfix for float */
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    float: right;
+    width: 130px;
+    height: auto;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    object-fit: cover;
+}
+
+.location-title {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin: 20px 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.location-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+@media (min-width: 500px) {
+    .location-details {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.location-details figure {
+    flex: 0 0 140px;
+    margin: 0;
+    text-align: center;
+}
+
+.location-details img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.location-details figcaption {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 5px;
+    color: #666;
+}
+
+.location-details p {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+/* Web Dev Resources Content */
+.resources-list {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.resources-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.resources-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -4px;
+}
+
+.resources-list a {
+    color: #0066cc;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.resources-list a:hover {
+    color: var(--primary-dark);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+#lastModified {
+    color: var(--highlight-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
