@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album – Responsive Gallery</title>
+    <meta name="description"
+        content="A responsive temple album showcasing Latter-day Saint temples from around the world. Built with mobile-first CSS Flexbox, CSS Grid, and custom design aesthetics.">
+    <meta name="author" content="Orlando Vivas">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- Deferred JavaScript -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Temple Album</h1>
+            <button id="menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">&#9776;</button>
+            <nav>
+                <a href="#" class="active">Home</a>
+                <a href="#">Old</a>
+                <a href="#">New</a>
+                <a href="#">Large</a>
+                <a href="#">Small</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Explore Latter-day Saint Temples</h2>
+
+        <div class="gallery-grid">
+            <!-- Temple 1 -->
+            <figure>
+                <a href="https://en.wikipedia.org/wiki/File:Salt_Lake_Temple,_Utah_-_Sept_2004.jpg" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="image-container">
+                        <img src="images/salt_lake.jpg" alt="Salt Lake Temple" loading="lazy">
+                    </div>
+                </a>
+                <figcaption>
+                    <h3><a href="https://en.wikipedia.org/wiki/File:Salt_Lake_Temple,_Utah_-_Sept_2004.jpg"
+                            target="_blank" rel="noopener noreferrer">Salt Lake Temple</a></h3>
+                    <p><strong>Location:</strong> Salt Lake City, Utah, USA</p>
+                    <p><strong>Dedicated:</strong> April 6, 1893</p>
+                </figcaption>
+            </figure>
+
+            <!-- Temple 2 -->
+            <figure>
+                <a href="https://en.wikipedia.org/wiki/File:RomeTempleatSunset.jpg" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="image-container">
+                        <img src="images/rome_italy.jpg" alt="Rome Italy Temple" loading="lazy">
+                    </div>
+                </a>
+                <figcaption>
+                    <h3><a href="https://en.wikipedia.org/wiki/File:RomeTempleatSunset.jpg" target="_blank"
+                            rel="noopener noreferrer">Rome Italy Temple</a></h3>
+                    <p><strong>Location:</strong> Rome, Italy</p>
+                    <p><strong>Dedicated:</strong> March 10, 2019</p>
+                </figcaption>
+            </figure>
+
+            <!-- Temple 3 -->
+            <figure>
+                <a href="https://en.wikipedia.org/wiki/File:Temple_mormon_de_Paris_au_Chesnay_le_8_avril_2017_-_36.jpg"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="image-container">
+                        <img src="images/paris_france.jpg" alt="Paris France Temple" loading="lazy">
+                    </div>
+                </a>
+                <figcaption>
+                    <h3><a href="https://en.wikipedia.org/wiki/File:Temple_mormon_de_Paris_au_Chesnay_le_8_avril_2017_-_36.jpg"
+                            target="_blank" rel="noopener noreferrer">Paris France Temple</a></h3>
+                    <p><strong>Location:</strong> Paris, France</p>
+                    <p><strong>Dedicated:</strong> May 21, 2017</p>
+                </figcaption>
+            </figure>
+
+            <!-- Temple 4 -->
+            <figure>
+                <a href="https://en.wikipedia.org/wiki/File:Tokyo_Temple.jpg" target="_blank" rel="noopener noreferrer">
+                    <div class="image-container">
+                        <img src="images/tokyo_japan.jpg" alt="Tokyo Japan Temple" loading="lazy">
+                    </div>
+                </a>
+                <figcaption>
+                    <h3><a href="https://en.wikipedia.org/wiki/File:Tokyo_Temple.jpg" target="_blank"
+                            rel="noopener noreferrer">Tokyo Japan Temple</a></h3>
+                    <p><strong>Location:</strong> Tokyo, Japan</p>
+                    <p><strong>Dedicated:</strong> October 27, 1980</p>
+                </figcaption>
+            </figure>
+
+            <!-- Temple 5 -->
+            <figure>
+                <a href="https://churchofjesuschristtemples.org/san-diego-california-temple/photographs/"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="image-container">
+                        <img src="https://s3-media0.fl.yelpcdn.com/bphoto/bVECYlOKNqYZXp4V1mY9Vw/o.jpg"
+                            alt="San Diego California Temple" loading="lazy">
+                    </div>
+                </a>
+                <figcaption>
+                    <h3><a href="https://churchofjesuschristtemples.org/san-diego-california-temple/photographs/"
+                            target="_blank" rel="noopener noreferrer">San Diego Temple</a></h3>
+                    <p><strong>Location:</strong> San Diego, California, USA</p>
+                    <p><strong>Dedicated:</strong> April 25, 1993</p>
+                </figcaption>
+            </figure>
+
+            <!-- Temple 6 -->
+            <figure>
+                <a href="https://churchofjesuschristtemples.org/washington-d.c.-temple/photographs/" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="image-container">
+                        <img src="images/washington_dc.jpg" alt="Washington D.C. Temple" loading="lazy">
+                    </div>
+                </a>
+                <figcaption>
+                    <h3><a href="https://churchofjesuschristtemples.org/washington-d.c.-temple/photographs/"
+                            target="_blank" rel="noopener noreferrer">Washington D.C. Temple</a></h3>
+                    <p><strong>Location:</strong> Kensington, Maryland, USA</p>
+                    <p><strong>Dedicated:</strong> November 19, 1974</p>
+                </figcaption>
+            </figure>
+
+            <!-- Temple 7 -->
+            <figure>
+                <a href="https://churchofjesuschristtemples.org/bern-switzerland-temple/photographs/" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="image-container">
+                        <img src="images/bern_switzerland.jpg" alt="Bern Switzerland Temple" loading="lazy">
+                    </div>
+                </a>
+                <figcaption>
+                    <h3><a href="https://churchofjesuschristtemples.org/bern-switzerland-temple/photographs/"
+                            target="_blank" rel="noopener noreferrer">Bern Switzerland Temple</a></h3>
+                    <p><strong>Location:</strong> Bern, Switzerland</p>
+                    <p><strong>Dedicated:</strong> September 11, 1955</p>
+                </figcaption>
+            </figure>
+
+            <!-- Temple 8 -->
+            <figure>
+                <a href="https://churchofjesuschristtemples.org/london-england-temple/photographs/" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="image-container">
+                        <img src="images/London-Temple.jpg" alt="London England Temple" loading="lazy">
+                    </div>
+                </a>
+                <figcaption>
+                    <h3><a href="https://churchofjesuschristtemples.org/london-england-temple/photographs/"
+                            target="_blank" rel="noopener noreferrer">London England Temple</a></h3>
+                    <p><strong>Location:</strong> London, England</p>
+                    <p><strong>Dedicated:</strong> September 7, 1958</p>
+                </figcaption>
+            </figure>
+
+            <!-- Temple 9 -->
+            <figure>
+                <a href="https://churchofjesuschristtemples.org/laie-hawaii-temple/photographs/" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="image-container">
+                        <img src="images/laie-hawaii-temple.jpg" alt="Laie Hawaii Temple" loading="lazy">
+                    </div>
+                </a>
+                <figcaption>
+                    <h3><a href="https://churchofjesuschristtemples.org/laie-hawaii-temple/photographs/" target="_blank"
+                            rel="noopener noreferrer">Laie Hawaii Temple</a></h3>
+                    <p><strong>Location:</strong> Laie, Hawaii, USA</p>
+                    <p><strong>Dedicated:</strong> November 27, 1919</p>
+                </figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Orlando Vivas | Guatemala</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

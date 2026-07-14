@@ -1,0 +1,86 @@
+/* W02 Temple Album Large View Stylesheet */
+
+@media (min-width: 48rem) { /* 768px and up */
+    
+    /* Header layout changes */
+    .header-container {
+        padding: 1.5rem 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    /* Hide Hamburger Button */
+    #menu-btn {
+        display: none;
+    }
+
+    /* Horizontal Flex Navigation Menu */
+    nav {
+        display: flex !important; /* Force display override */
+        flex-direction: row;
+        width: auto;
+        background-color: transparent;
+        border-top: none;
+    }
+
+    nav a {
+        padding: 0.5rem 1.25rem;
+        margin-left: 0.5rem;
+        border-bottom: 2px solid transparent;
+        border-radius: 4px;
+        transition: var(--transition-smooth);
+        font-size: 1rem;
+    }
+
+    /* Advanced Hover Effect for Desktop Menu */
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: var(--accent-color);
+        padding-left: 1.25rem; /* Reset mobile padding-left shift */
+        transform: translateY(-2px);
+    }
+
+    nav a::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: var(--accent-color);
+        transition: var(--transition-smooth);
+        margin-top: 4px;
+        border-radius: 2px;
+    }
+
+    nav a:hover::after {
+        width: 100%;
+    }
+
+    /* Main Container Padding */
+    main {
+        padding: 0;
+        margin: 3rem auto;
+    }
+
+    main h2 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Three-Column CSS Grid for Temple Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    /* Premium Gallery Card Enhancements */
+    figure {
+        box-shadow: var(--shadow-sm);
+    }
+
+    figure:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+    }
+}
