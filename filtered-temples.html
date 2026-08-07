@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Orlando Vivas</title>
+    <meta name="description"
+        content="A responsive, filterable temple album showcasing Latter-day Saint temples from around the world, built dynamically with JavaScript.">
+    <meta name="author" content="Orlando Vivas">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+    <!-- Deferred JavaScript -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body class="temples-page">
+    <header>
+        <div class="header-container">
+            <h1>Temple Album</h1>
+            <button id="menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">&#9776;</button>
+            <nav>
+                <a href="#" class="active" data-filter="home">Home</a>
+                <a href="#" data-filter="old">Old</a>
+                <a href="#" data-filter="new">New</a>
+                <a href="#" data-filter="large">Large</a>
+                <a href="#" data-filter="small">Small</a>
+            </nav>
+        </div>
+        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+    </header>
+
+    <main>
+        <h2>Explore Latter-day Saint Temples</h2>
+
+        <div class="gallery-grid">
+            <!-- Static fallback cards; replaced/extended dynamically by scripts/filtered-temples.js -->
+            <section class="card">
+                <figure>
+                    <div class="image-container">
+                        <img src="images/aba-nigeria-temple.jpg" alt="Aba Nigeria" loading="lazy">
+                    </div>
+                    <figcaption>
+                        <h3>Aba Nigeria</h3>
+                        <p><strong>Location:</strong> Aba, Nigeria</p>
+                        <p><strong>Dedicated:</strong> 2005, August, 7</p>
+                        <p><strong>Area:</strong> 11,500 sq ft</p>
+                    </figcaption>
+                </figure>
+            </section>
+            <section class="card">
+                <figure>
+                    <div class="image-container">
+                        <img src="images/manti-utah-temple.jpg" alt="Manti Utah" loading="lazy">
+                    </div>
+                    <figcaption>
+                        <h3>Manti Utah</h3>
+                        <p><strong>Location:</strong> Manti, Utah, United States</p>
+                        <p><strong>Dedicated:</strong> 1888, May, 21</p>
+                        <p><strong>Area:</strong> 74,792 sq ft</p>
+                    </figcaption>
+                </figure>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Orlando Vivas | Guatemala</p>
+        <p id="lastModified"></p>
+        <a href="https://www.churchofjesuschrist.org/temples" target="_blank">Sitio Oficial de Templos</a>
+        <a href="https://github.com/vivaseliezer/wdd131" target="_blank">Repositorio en GitHub</a>
+    </footer>
+</body>
+
+</html>

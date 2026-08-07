@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtakuVerse - Website Planning Document</title>
+    <meta name="description" content="Website planning document for OtakuVerse, an anime and video game fan hub.">
+    <meta name="author" content="Orlando Vivas">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/siteplan-large.css">
+    <script src="../scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>OtakuVerse</h1>
+        <p class="tagline">Website Planning Document</p>
+    </header>
+
+    <main>
+        <section id="site-name">
+            <h2>1. Site Name</h2>
+            <p><strong>OtakuVerse</strong></p>
+            <p>This name was chosen because it blends "otaku" (a passionate fan of anime and games) with "universe," reflecting a hub that brings together anime and video game fandoms in one place. It is short, easy to remember, and clearly signals the site's focus to visitors.</p>
+            <p>Optional domain availability: <code>otakuverse.io</code></p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>2. Site Purpose</h2>
+            <p>OtakuVerse is a content and community hub for fans of anime and video games. The site provides:</p>
+            <ul>
+                <li>Curated reviews and recommendations for ongoing and upcoming anime series.</li>
+                <li>Guides and recommendations for video games connected to anime franchises, including adaptations and anime-inspired RPGs.</li>
+                <li>A community space where fans can discuss favorite series, games, and crossovers.</li>
+            </ul>
+        </section>
+
+        <section id="scenarios">
+            <h2>3. Scenarios</h2>
+            <ul>
+                <li>I just finished a great isekai anime &mdash; what similar RPG video games would I enjoy?</li>
+                <li>Where can I find honest reviews of this season's new anime releases before I commit to watching?</li>
+                <li>How do I connect with other fans who want to discuss a specific game or anime crossover?</li>
+            </ul>
+        </section>
+
+        <section id="color-schema">
+            <h2>4. Color Schema</h2>
+            <p>The color schema uses a dark "gamer" background with neon accents to reflect the energy of anime and gaming culture.</p>
+            <ul class="color-list">
+                <li><span class="swatch swatch-navy" aria-hidden="true"></span><strong>Deep Space Navy (#12121a)</strong> &mdash; used as the main page background.</li>
+                <li><span class="swatch swatch-violet" aria-hidden="true"></span><strong>Neon Violet (#8b5cf6)</strong> &mdash; used for headings and navigation highlights.</li>
+                <li><span class="swatch swatch-cyan" aria-hidden="true"></span><strong>Cyber Cyan (#22d3ee)</strong> &mdash; used for links, buttons, and accents.</li>
+                <li><span class="swatch swatch-white" aria-hidden="true"></span><strong>Soft White (#f4f4f8)</strong> &mdash; used for body text for readability.</li>
+            </ul>
+        </section>
+
+        <section id="typography">
+            <h2>5. Typography</h2>
+            <p>Two fonts from Google Fonts were selected:</p>
+            <ul>
+                <li><strong class="font-heading">Orbitron</strong> &mdash; a bold, futuristic display font used for all headings and navigation, matching the gaming/anime aesthetic.</li>
+                <li><strong class="font-body">Poppins</strong> &mdash; a clean, modern sans-serif used for body text, lists, and general content for easy reading.</li>
+            </ul>
+        </section>
+
+        <section id="wireframes">
+            <h2>6. Wireframes</h2>
+            <p>Home page layout sketches for mobile and desktop viewports.</p>
+            <div class="wireframe-group">
+                <figure>
+                    <svg viewBox="0 0 220 420" role="img" aria-labelledby="mobileTitle" xmlns="http://www.w3.org/2000/svg">
+                        <title id="mobileTitle">Mobile wireframe: stacked header, nav, hero, three content cards, and footer</title>
+                        <rect x="2" y="2" width="216" height="416" fill="none" stroke="#8b5cf6" stroke-width="2"></rect>
+                        <rect x="12" y="12" width="196" height="36" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="110" y="34" text-anchor="middle" font-size="11" fill="#f4f4f8">Header / Logo</text>
+                        <rect x="12" y="58" width="196" height="24" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="110" y="74" text-anchor="middle" font-size="10" fill="#f4f4f8">Nav (hamburger)</text>
+                        <rect x="12" y="92" width="196" height="80" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="110" y="136" text-anchor="middle" font-size="10" fill="#f4f4f8">Hero Banner</text>
+                        <rect x="12" y="182" width="196" height="60" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="110" y="216" text-anchor="middle" font-size="10" fill="#f4f4f8">Card 1</text>
+                        <rect x="12" y="252" width="196" height="60" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="110" y="286" text-anchor="middle" font-size="10" fill="#f4f4f8">Card 2</text>
+                        <rect x="12" y="322" width="196" height="60" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="110" y="356" text-anchor="middle" font-size="10" fill="#f4f4f8">Card 3</text>
+                        <rect x="12" y="392" width="196" height="18" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="110" y="405" text-anchor="middle" font-size="9" fill="#f4f4f8">Footer</text>
+                    </svg>
+                    <figcaption>Mobile view (single column)</figcaption>
+                </figure>
+
+                <figure>
+                    <svg viewBox="0 0 480 300" role="img" aria-labelledby="desktopTitle" xmlns="http://www.w3.org/2000/svg">
+                        <title id="desktopTitle">Desktop wireframe: header with inline nav, hero, three-column content grid, and footer</title>
+                        <rect x="2" y="2" width="476" height="296" fill="none" stroke="#8b5cf6" stroke-width="2"></rect>
+                        <rect x="12" y="12" width="456" height="36" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="240" y="34" text-anchor="middle" font-size="12" fill="#f4f4f8">Header / Logo + Nav</text>
+                        <rect x="12" y="58" width="456" height="70" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="240" y="97" text-anchor="middle" font-size="12" fill="#f4f4f8">Hero Banner</text>
+                        <rect x="12" y="138" width="140" height="90" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="82" y="186" text-anchor="middle" font-size="11" fill="#f4f4f8">Card 1</text>
+                        <rect x="164" y="138" width="140" height="90" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="234" y="186" text-anchor="middle" font-size="11" fill="#f4f4f8">Card 2</text>
+                        <rect x="316" y="138" width="152" height="90" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="392" y="186" text-anchor="middle" font-size="11" fill="#f4f4f8">Card 3</text>
+                        <rect x="12" y="240" width="456" height="46" fill="none" stroke="#22d3ee" stroke-width="2"></rect>
+                        <text x="240" y="266" text-anchor="middle" font-size="11" fill="#f4f4f8">Footer</text>
+                    </svg>
+                    <figcaption>Desktop view (wider viewport)</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Orlando Vivas | OtakuVerse Website Planning Document</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

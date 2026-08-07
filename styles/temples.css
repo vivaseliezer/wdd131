@@ -1,0 +1,268 @@
+/* W02 Temple Album Mobile-First Stylesheet */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600&display=swap');
+
+/* Color Variables & Theme Design Tokens */
+:root {
+    --primary-color: #0d1b2a;       /* Deep Imperial Navy */
+    --accent-color: #d4af37;        /* Classic Gold */
+    --accent-hover: #f3e5ab;       /* Soft Light Gold */
+    --bg-color: #f4f6f9;            /* Premium Light Ice Gray */
+    --card-bg: #ffffff;             /* Crisp White */
+    --text-main: #1b263b;           /* Slate Navy for readability */
+    --text-muted: #5c677d;          /* Soft Gray-Blue */
+    --border-color: #e2e8f0;        /* Delicate Border Gray */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 12px 30px rgba(13, 27, 42, 0.15);
+    --font-heading: 'Outfit', sans-serif;
+    --font-display: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+    --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Global Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header h1 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 2px;
+}
+
+/* Hamburger Menu Button */
+#menu-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+    outline: none;
+}
+
+#menu-btn:hover, #menu-btn:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color);
+    color: #ffffff;
+}
+
+/* Navigation Menu */
+nav {
+    display: none; /* Hidden by default in mobile view */
+    flex-direction: column;
+    width: 100%;
+    background-color: #152538; /* Slightly lighter navy for nav container */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav.open {
+    display: flex; /* Shown when hamburger toggled */
+    animation: slideDown 0.3s ease-out forwards;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding-left: 2rem; /* Subtle sliding visual feedback on mobile */
+}
+
+/* Main Layout */
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 1000px; /* Limit width & center */
+    margin: 2rem auto;
+    padding: 0 10px;
+}
+
+main h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+main h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
+}
+
+/* CSS Grid for Figures - 1 Column default in Mobile */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Figure (Temple Card) Styling */
+figure {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+figure > a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 66.67%; /* 3:2 Aspect Ratio */
+}
+
+figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+figure:hover img {
+    transform: scale(1.06);
+}
+
+/* Figcaption Styling */
+figcaption {
+    padding: 1.2rem;
+    text-align: center;
+    font-family: var(--font-heading);
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-color);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+figcaption h3 {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+figcaption p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+figcaption a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+figcaption a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: auto;
+    border-top: 4px solid var(--accent-color);
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+    letter-spacing: 0.5px;
+}
+
+#lastModified {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-top: 0.6rem;
+}
+
+/* Keyframes for Mobile Nav Slide Down */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted | Product Review Confirmation</title>
+    <meta name="author" content="Orlando Vivas">
+    <meta name="description" content="Confirmation page showing the details of a submitted product review.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+    <script src="scripts/products.js" defer></script>
+    <script src="scripts/review.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Thank You!</h1>
+        <p class="subtitle">Your product review has been received</p>
+    </header>
+
+    <main>
+        <section class="confirmation-card">
+            <p class="review-counter">You are reviewer #<span id="reviewCount">0</span>!</p>
+
+            <dl class="confirmation-list">
+                <dt>Product</dt>
+                <dd id="confirmProduct"></dd>
+
+                <dt>Overall Rating</dt>
+                <dd id="confirmRating"></dd>
+
+                <dt>Date of Installation</dt>
+                <dd id="confirmDate"></dd>
+
+                <dt>Useful Features</dt>
+                <dd id="confirmFeatures"></dd>
+
+                <dt>Written Review</dt>
+                <dd id="confirmReview"></dd>
+
+                <dt>Submitted By</dt>
+                <dd id="confirmUserName"></dd>
+            </dl>
+
+            <a class="button-link" href="form.html">Submit Another Review</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Orlando Vivas | Guatemala</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
