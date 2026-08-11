@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtakuVerse | Movie Directory - WDD 131 Dynamic Web Fundamentals - Orlando Vivas</title>
+    <meta name="description"
+        content="Search and explore live anime movies and cinematic titles on OtakuVerse. Real-time TMDB API searches.">
+    <meta name="author" content="Orlando Vivas">
+
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- JavaScript Files -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-container">
+                <p class="eyebrow">Explore &middot; Backlog</p>
+                <h1>Otaku<span class="tilt">Verse</span></h1>
+                <p class="tagline">The ultimate anime and video game hub.</p>
+                <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+            </a>
+
+            <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+            <nav id="site-nav" aria-label="Primary Navigation">
+                <a href="index.html">Home</a>
+                <a href="directory.html" class="active">Movie Directory</a>
+                <a href="tracker.html" class="site-nav-cta">My Watchlist!</a>
+                <a href="siteplan.html">Site Plan</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Explorer Search Input Header -->
+    <header class="explorer-header">
+        <form id="form">
+            <input type="text" autocomplete="off" id="search" placeholder="Search Movies..." class="search">
+        </form>
+    </header>
+
+    <!-- Main dynamic movie poster grid wrapper -->
+    <main id="main">
+        <!-- Movies render dynamically from directory.js -->
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentyear"></span> | Orlando Vivas | Guatemala City, Guatemala | <a href="https://github.com/vivaseliezer/wdd131" target="_blank" rel="noopener" class="footer-link">GitHub Repository</a></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

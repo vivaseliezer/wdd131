@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtakuVerse | Home - WDD 131 Dynamic Web Fundamentals - Orlando Vivas</title>
+    <meta name="description"
+        content="Explore, discover, and organize your favorite anime and gaming titles. Dynamic data search, local recommendations, and a persistent watchlist.">
+    <meta name="author" content="Orlando Vivas">
+
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- JavaScript Files -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-container">
+                <p class="eyebrow">Explore &middot; Backlog</p>
+                <h1>Otaku<span class="tilt">Verse</span></h1>
+                <p class="tagline">The ultimate anime and video game hub.</p>
+                <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+            </a>
+
+            <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+            <nav id="site-nav" aria-label="Primary Navigation">
+                <a href="index.html" class="active">Home</a>
+                <a href="directory.html">Movie Directory</a>
+                <a href="tracker.html" class="site-nav-cta">My Watchlist!</a>
+                <a href="siteplan.html">Site Plan</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Introduction Hero Panel -->
+        <section class="intro-section" aria-labelledby="hero-heading">
+            <h2 id="hero-heading">Step Into the OtakuUniverse</h2>
+            <p>Welcome to OtakuVerse! Explore detailed anime movies, search database registries in real-time, and manage your personal watch backlog. Add series and gaming titles to your custom queue and let our portal store your progress persistently.</p>
+        </section>
+
+        <!-- Home Grid Dashboard -->
+        <div class="home-grid">
+            <!-- Dynamic Movie of the Day Panel -->
+            <section class="section-panel card" aria-labelledby="spotlight-heading">
+                <div class="panel-title-wrapper">
+                    <h3 class="panel-title" id="spotlight-heading">Spotlight of the Day</h3>
+                </div>
+                <p class="panel-desc">Explore a randomly highlighted anime masterpiece below. Refresh the page to see another suggestion!</p>
+                <div id="featured-anime-container">
+                    <!-- Dynamic rendering by scripts/home.js -->
+                </div>
+            </section>
+
+            <!-- Community / News Panel -->
+            <section class="section-panel card" aria-labelledby="news-heading">
+                <div class="panel-title-wrapper">
+                    <h3 class="panel-title" id="news-heading">Hub Announcements</h3>
+                </div>
+                <p class="panel-desc">Stay updated with OtakuVerse releases, season guidelines, and community news.</p>
+                
+                <div class="news-list">
+                    <div class="news-card">
+                        <h4>1. New Season Guide Out</h4>
+                        <p>Our editors compiled a comprehensive review guide for upcoming sci-fi and isekai releases launching this season.</p>
+                    </div>
+
+                    <div class="news-card">
+                        <h4>2. Gaming Crossovers</h4>
+                        <p>Explore recommendations for action RPGs inspired by retro manga, featuring custom level design lists.</p>
+                    </div>
+
+                    <div class="news-card">
+                        <h4>3. Server System Update</h4>
+                        <p>The community watchlist tracker form has been updated with high-priority tags for local browser persistence.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Featured Local Gallery Grid Section (using local downloaded images) -->
+        <section class="section-panel gallery-panel" aria-labelledby="gallery-heading">
+            <div class="panel-title-wrapper">
+                <h3 class="panel-title" id="gallery-heading">Featured Anime Releases (Local Database)</h3>
+            </div>
+            <p class="panel-desc-small">The following anime titles are stored locally in our asset database, complete with detailed plot overviews. Hover on any card to read details!</p>
+            
+            <div id="recommendations-grid" class="local-gallery-grid">
+                <!-- Rendered dynamically by scripts/home.js from local images -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentyear"></span> | Orlando Vivas | Guatemala City, Guatemala | <a href="https://github.com/vivaseliezer/wdd131" target="_blank" rel="noopener" class="footer-link">GitHub Repository</a></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtakuVerse | My Watchlist - WDD 131 Dynamic Web Fundamentals - Orlando Vivas</title>
+    <meta name="description"
+        content="Manage your personal anime and gaming backlog queue persistently. Input progress metrics and save records to local storage.">
+    <meta name="author" content="Orlando Vivas">
+
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- JavaScript Files -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/tracker.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-container">
+                <p class="eyebrow">Explore &middot; Backlog</p>
+                <h1>Otaku<span class="tilt">Verse</span></h1>
+                <p class="tagline">The ultimate anime and video game hub.</p>
+                <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+            </a>
+
+            <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+            <nav id="site-nav" aria-label="Primary Navigation">
+                <a href="index.html">Home</a>
+                <a href="directory.html">Movie Directory</a>
+                <a href="tracker.html" class="active site-nav-cta">My Watchlist!</a>
+                <a href="siteplan.html">Site Plan</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <h2>My Watchlist &amp; Backlog Tracker</h2>
+
+        <div class="tracker-layout">
+            <!-- Add Item Form Panel -->
+            <section class="form-panel" aria-labelledby="form-heading">
+                <h3 id="form-heading">Queue a New Title</h3>
+                <form id="watchlist-form" novalidate>
+                    <div class="form-group">
+                        <label for="item-title">Title Name *</label>
+                        <input type="text" id="item-title" class="form-control" placeholder="e.g. InuYasha, Final Fantasy" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="item-type">Media Type</label>
+                        <select id="item-type" class="form-control">
+                            <option value="anime">Anime Series/Movie</option>
+                            <option value="game">Video Game</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="item-progress">Current Progress (Episodes / Hours) *</label>
+                        <input type="number" id="item-progress" class="form-control" min="0" placeholder="e.g. 5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="item-status">Status</label>
+                        <select id="item-status" class="form-control">
+                            <option value="plan">Plan to Watch/Play</option>
+                            <option value="watching">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn" id="submit-btn">Add to Watchlist</button>
+                </form>
+            </section>
+
+            <!-- Active Watchlist Display Panel -->
+            <section class="watchlist-section" aria-labelledby="watchlist-heading">
+                <h3 class="section-title" id="watchlist-heading" style="border-left: 4px solid var(--accent-cyan); padding-left: 0.5rem; color: var(--text-white); font-family: var(--font-heading); font-size: 1.25rem;">My Active Queue</h3>
+                <div id="watchlist-items">
+                    <!-- Rendered dynamically by scripts/tracker.js from localStorage -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentyear"></span> | Orlando Vivas | Guatemala City, Guatemala | <a href="https://github.com/vivaseliezer/wdd131" target="_blank" rel="noopener" class="footer-link">GitHub Repository</a></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
