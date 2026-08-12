@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OtakuVerse | Movie Directory - WDD 131 Dynamic Web Fundamentals - Orlando Vivas</title>
+    <title>OtakuVerse | Manga Store - WDD 131 Dynamic Web Fundamentals - Orlando Vivas</title>
     <meta name="description"
-        content="Search and explore live anime movies and cinematic titles on OtakuVerse. Real-time TMDB API searches.">
+        content="Browse, filter, and search your favorite manga titles in the OtakuVerse Manga Catalog. Add volumes directly to your queue.">
     <meta name="author" content="Orlando Vivas">
 
     <!-- Google Fonts Links -->
@@ -37,24 +37,48 @@
             <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
             <nav id="site-nav" aria-label="Primary Navigation">
                 <a href="index.html">Home</a>
-                <a href="directory.html" class="active">Movie Directory</a>
+                <a href="directory.html" class="active">Manga Store</a>
                 <a href="tracker.html" class="site-nav-cta">My Watchlist!</a>
                 <a href="siteplan.html">Site Plan</a>
             </nav>
         </div>
     </header>
 
-    <!-- Explorer Search Input Header -->
-    <header class="explorer-header">
-        <form id="form">
-            <input type="text" autocomplete="off" id="search" placeholder="Search Movies..." class="search">
+    <!-- Explorer Search & Controls Header -->
+    <header class="explorer-header catalog-controls">
+        <form id="form" class="search-form">
+            <input type="text" autocomplete="off" id="search" placeholder="Search Manga..." class="search">
         </form>
+
+        <div class="sort-wrapper">
+            <label for="sort-select">Sort By:</label>
+            <select id="sort-select" class="sort-dropdown">
+                <option value="default">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating-desc">Top Rated</option>
+            </select>
+        </div>
     </header>
 
-    <!-- Main dynamic movie poster grid wrapper -->
-    <main id="main">
-        <!-- Movies render dynamically from directory.js -->
+    <!-- Filter Bar Container -->
+    <div class="filter-bar-container">
+        <div class="filter-bar" id="filter-bar">
+            <button class="filter-btn active" data-genre="all">All Volumes</button>
+            <button class="filter-btn" data-genre="action">Action</button>
+            <button class="filter-btn" data-genre="isekai">Isekai</button>
+            <button class="filter-btn" data-genre="sci-fi">Sci-Fi</button>
+            <button class="filter-btn" data-genre="fantasy">Fantasy</button>
+        </div>
+    </div>
+
+    <!-- Main dynamic manga grid wrapper -->
+    <main id="main" class="catalog-grid">
+        <!-- Manga volumes render dynamically from directory.js -->
     </main>
+
+    <!-- Simple notification toast for adding items -->
+    <div id="toast" class="toast" aria-live="polite">Added to Watchlist!</div>
 
     <footer class="site-footer">
         <p>&copy; <span id="currentyear"></span> | Orlando Vivas | Guatemala City, Guatemala | <a href="https://github.com/vivaseliezer/wdd131" target="_blank" rel="noopener" class="footer-link">GitHub Repository</a></p>

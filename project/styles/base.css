@@ -790,3 +790,141 @@ footer.site-footer p {
 .site-footer a.footer-link:hover {
     color: var(--accent-violet);
 }
+
+/* Manga Catalog Filter & Controls Styling */
+.catalog-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--bg-card);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.sort-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: var(--text-white);
+}
+
+.sort-dropdown {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    outline: none;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.sort-dropdown:focus {
+    border-color: var(--accent-cyan);
+}
+
+.filter-bar-container {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.filter-btn {
+    background-color: var(--bg-card);
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--accent-violet);
+    color: var(--text-white);
+    border-color: var(--accent-violet);
+    box-shadow: 0 2px 8px rgba(167, 139, 250, 0.3);
+}
+
+.manga-details-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: 0.25rem;
+}
+
+.manga-price {
+    color: var(--accent-cyan);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.manga-author {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.manga-action-container {
+    padding: 0.8rem 1rem 1rem 1rem;
+}
+
+.add-to-watchlist-btn {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.manga-genre-badge {
+    display: inline-block;
+    background-color: rgba(34, 211, 238, 0.15);
+    color: var(--accent-cyan);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--accent-violet);
+    color: var(--text-white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
